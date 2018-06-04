@@ -1,6 +1,6 @@
-# Lulafitness
+# Mixedracefaces
 
-This is the source code for lulafitness.co.uk. Built on top of Hugo with a Gulp assets pipeline.
+This is the source code for mixedracefaces.com. Built on top of Hugo with a Gulp assets pipeline.
 
 ## Getting Started
 

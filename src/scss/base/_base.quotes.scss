@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #BASE: QUOTES
+\*------------------------------------*/
+
+blockquote {
+  @include margin-top(1.5);
+  margin-left: 0;
+  max-width: 32em;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}

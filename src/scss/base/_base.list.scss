@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    #BASE: LISTS
+\*------------------------------------*/
+
+ul, ol {
+  padding-left: 0;
+  list-style-position: outside;
+  list-style-type: square;
+  color: $color-dark;
+  @include margin-bottom(2);
+  font-weight: $font-weight-bold;
+
+}

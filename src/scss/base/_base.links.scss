@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #BASE: LINKS
+\*------------------------------------*/
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  &:before {
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out
+    }
+}
+
+p {
+  a {
+    padding: 0 0 3px 0;
+    border-bottom: 1px dotted $color-link;
+
+    &:hover {
+      border-bottom: 1px solid $color-link-hover;
+    }
+  }
+}

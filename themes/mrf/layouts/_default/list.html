@@ -1,0 +1,17 @@
+{{ define "main"}}
+<section class="Container">
+    <article id="content" class="Content">
+        <h1>{{ .Title }}</h1>
+        <ul class="Posts">
+        {{ range .Data.Pages }}
+          <li>
+            <span>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              <time class="">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+            </span>
+          </li>
+        {{ end }}
+        </ul>
+      </article><!--/.Content -->
+  </section><!--/.Container -->
+{{ end }}

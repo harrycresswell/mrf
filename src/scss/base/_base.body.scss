@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #BASE: BODY
+\*------------------------------------*/
+
+// Set base font size
+html {
+  font-size: #{$base-font-size + '%'}; // 100% = 14px
+  font-feature-settings: "calt","liga","hist","onum","pnum";
+  @media screen and (min-width: $bp-md){
+    font-size: #{$base-font-size-desktop + '%'};
+  }
+}
+
+// Set line-height and margins for all elements
+* {
+  @include line-height(1);
+  @include margin-top(0);
+}
+
+body {
+  color: $color-body;
+  font-family: $font-inconsolata;
+  font-weight: $font-weight-regular;
+  font-style: normal;
+}

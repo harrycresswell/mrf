@@ -1,0 +1,9 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Mixed Race Faces"
+author = "Harry Cresswell"
+theme = "mrf"
+
+[permalinks]
+page = "/:title/"
+posts = "/:slug/"

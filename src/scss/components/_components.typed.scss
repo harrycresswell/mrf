@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    .TYPED
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+ @mixin typeword($string) {
+  $length: str-length($string);
+  $percent: 100%/$length;
+  $timing: $length/4;
+
+  &:before {
+    content: $string;
+    animation: typeword #{$timing}s linear infinite;
+  }
+  &:after {
+    content:"|";
+    animation: blink 1s steps(2, end) forwards infinite;
+  }
+
+  @keyframes typeword {
+    @for $i from 0 through $length {
+      $percent: 50%/$length * $i;
+      #{$percent} { content: str-slice($string, 0, $i+1); }
+    }
+    100% {
+      content: $string;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.Typed {
+  @include typeword('Mixed Race Faces.');
+}

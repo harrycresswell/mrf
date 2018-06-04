@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    .FLEX
+\*------------------------------------*/
+
+/**
+* Component Block
+*/
+
+.Flex-column {
+  flex-basis: 100%;
+}
+
+@include breakpoint(ml) {
+  .Flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .Flex-column {
+    flex: 1;
+  }
+}
+
+/**
+* Component Modifier
+*/
+
+.Flex-row.Flex--nr{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.Flex--gutters > div {
+  margin: 16px;
+}
+
+.Flex--55 {
+  flex: 5.5;
+}
+
+.Flex--45 {
+  flex: 4.5;
+}
+
+.Flex--25 {
+  flex: 2.5;
+}

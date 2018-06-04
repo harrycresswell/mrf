@@ -1,0 +1,32 @@
+{
+  "name": "mixedracefaces",
+  "version": "1.0.0",
+  "description": "A hugo build for mixedracefaces.com",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrycresswell/mrf.git"
+  },
+  "keywords": [
+    "gulp",
+    "netlify",
+    "sass"
+  ],
+  "author": "Harry Cresswell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrycresswell/mrf/issues"
+  },
+  "homepage": "https://github.com/harrycresswell/mrf#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}

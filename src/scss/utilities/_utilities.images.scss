@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    #UTILITIES: IMAGES
+\*------------------------------------*/
+
+.u-full-bleed {
+  margin-left: -7%;
+  margin-right: -7%;
+}
+
+@include breakpoint(sm) {
+  .u-full-bleed {
+    margin-left: 0;
+    margin-right: -11%;
+  }
+}
+
+@include breakpoint(md) {
+  .u-full-bleed {
+    margin-left: 0;
+    margin-right: -11%;
+  }
+}
+
+@include breakpoint(ml) {
+  .u-full-bleed {
+    margin-left: 0;
+    margin-right: -18%;
+  }
+}

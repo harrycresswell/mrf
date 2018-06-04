@@ -1,0 +1,13 @@
+<figure {{ if .Get "class" }} class="{{ .Get "class" }}"{{ end }}>
+    <img  src="{{ $.Site.BaseURL }}images/{{ .Get "src" }}" alt="{{ .Page.Title }} {{ .Get "src" }}"/>
+    {{ if .Get "caption" }}
+    <figcaption class="c-image-caption">
+      {{ if .Get "href" }}
+      <a href="{{ .Get "href" }}" target="_blank">{{ .Get "caption" }}</a>
+      {{ else }}
+      {{ .Get "caption" }}
+      {{ end }}
+      </figcaption>
+      {{ end }}
+    </figcaption>
+</figure>

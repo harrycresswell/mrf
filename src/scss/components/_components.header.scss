@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    .HEADER
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+ .Header {
+  letter-spacing: 1px;
+  font-family: $font-inconsolata;
+  margin: 0 auto;
+  max-width: 1080px;
+  @include margin-top(2);
+ }
+
+ .Site-title {
+  color: $color-dark;
+ }

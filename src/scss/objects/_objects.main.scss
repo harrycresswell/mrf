@@ -1,0 +1,12 @@
+/*------------------------------------*\
+    .MAIN
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+ .Main {
+  @include margin-left(1);
+  @include margin-right(1);
+}

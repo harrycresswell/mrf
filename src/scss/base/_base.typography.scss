@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    #BASE: TYPOGRAPHY
+\*------------------------------------*/
+
+// [ h1: font-size: [x value from scale], line-height: 1.5 × 28px, margin-top: 3 × 28px, margin-bottom: 2 × 28px ]
+$headings: (
+  h1: (4, 2, 3, 1),
+  h2: (1, 1, 2, 1),
+  h3: (3, 1, 3, 1),
+  h4: (2, 1.25, 2, 1),
+  h5: (1, 1.25, 1, 0),
+  h6: (0, 1, 1, 0)
+);
+
+// Set font-size, line-heights and margins for headings
+@each $heading, $properties in $headings {
+  #{$heading} {
+    font-size: ms(nth($properties, 1));
+    @include line-height(nth($properties, 2));
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-dark;
+  font-family: $font-inconsolata;
+  font-weight: $font-weight-regular;
+}
+
+em, i {
+  font-family: $font-inconsolata;
+}
+
+@media screen and (min-width: $bp-md){
+  h1 {
+       font-size: ms(5);
+  }
+}

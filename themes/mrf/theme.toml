@@ -1,0 +1,51 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Mixedracefaces"
+license = "MIT"
+licenselink = "https://github.com/harrycresswell/mrf/blob/master/LICENSE.md"
+description = "A robust type led responsive theme for Mixed Race Faces"
+homepage = "https://mixedracefaces.com/"
+tags = [blog, personal]
+features = [blog, themes]
+min_version = "0.30.2"
+
+[author]
+  name = "Harry Cresswell"
+  homepage = "https://harrycresswell.com/"
+
+# If porting an existing theme
+[original]
+  name = "Harry Cresswell"
+  homepage = "https://harrycresswell.com/"
+  repo = "https://github.com/harrycresswell/mrf/"
+
+  [[menu.footer]]
+  identifier = "instagram"
+  name = "Instagram"
+  url = "https://www.instagram.com/lulafitness/"
+  weight = -70
+
+  [[menu.footer]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact/"
+  weight = -80
+
+  [[menu.main]]
+  identifier = "about-lula"
+  name = "About Lula"
+  url = "/about-lula/"
+  weight = -90
+
+  [[menu.main]]
+  identifier = "pricing"
+  name = "Pricing"
+  url = "/pricing/"
+  weight = -100
+
+  [[menu.main]]
+  identifier = "consultation"
+  name = "Consultation"
+  url = "/consultation/"
+  weight = -110

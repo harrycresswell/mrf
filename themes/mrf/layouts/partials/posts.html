@@ -1,0 +1,16 @@
+<div class="Posts">
+    {{ range .Data.Pages }}
+    <div class="Post">
+    <h1 class="Post-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h1>
+    <span class="Post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+    {{ .Summary }}
+    {{ if .Truncated }}
+    <div class="read-more-link">
+      <a href="{{ .RelPermalink }}">Read More…</a>
+    </div>
+    {{ end }}
+    </div>
+    {{ end }}
+</div>

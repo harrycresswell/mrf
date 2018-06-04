@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {{ with .Site.Params.keywords }}<meta name="keywords" content="{{.}}">{{ end }}
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}{{if .IsHome}} &middot; {{ .Site.Params.description }}{{else}} &middot; {{.Description}}{{end}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    {{ if not .Site.Params.OpenGraph.hide }}
+		<meta name="og:site_name" content="{{ .Site.Title }}">
+		<meta name="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+		<meta name="og:url" content="{{ .Permalink }}">
+		<meta name="og:image" content="{{ .Site.BaseURL }}images/lula.jpg">
+		{{ end }}
+
+		{{ .Hugo.Generator }}
+
+    <!-- canonical link tag -->
+    <link rel="canonical" href="{{ .Permalink }}"/>
+
+    <!-- RSS -->
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
+
+    <!-- Load Webfonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/whu5zeh.css">
+
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="#" />
+
+</head>

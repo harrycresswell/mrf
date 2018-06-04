@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #BASE: IMAGES
+\*------------------------------------*/
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+figure {
+  @include margin-left(0);
+  @include margin-right(0);
+  @include margin-bottom(2);
+  @include margin-top(2);
+}

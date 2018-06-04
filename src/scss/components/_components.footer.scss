@@ -1,0 +1,17 @@
+/*------------------------------------*\
+    .Footer
+\*------------------------------------*/
+
+/**
+ * Component Block
+ */
+
+.Footer {
+  @include margin-left(1);
+  @include margin-right(1);
+  @include margin-bottom(3);
+}
+
+.Contact {
+  font-family: $font-inconsolata;
+}

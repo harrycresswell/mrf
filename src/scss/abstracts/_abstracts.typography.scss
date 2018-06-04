@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #ABSTRACTS: TYPOGRAPHY
+\*------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+
+// Fonts
+$font-inconsolata: "inconsolata",sans-serif;
+$font-johndoe: "john-doe",sans-serif;
+
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Variables
+$base-font-size: 100; // Gets used as %, converts to 16px
+$base-font-size-desktop: 115; // Gets used as %, converts to 18px
+$line-height: 1.5; // Sets vertical rhythm (24px / 16px = 1.6)
+$line-height-desktop: 1.6; // Sets vertical rhythm (32px / 20px = 1.6)
+$base: ($base-font-size / 100);
+//$leading: $base * $line-height;
+
+// Modular scale
+$ratio: 1.25; // Major Third 4:5 http://www.modularscale.com/?20&px&1.25
+
+
+// pow and modular scale functions used to set font-sizes
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number; //Multiply by $number if exponent less than zero
+    }
+  } @else if $exponent < 0 {
+    @for $i from 1 through -$exponent {
+      $value: $value / $number; //Divide by $number if exponent less than zero
+    }
+  }
+
+  @return $value;
+}
+
+@function ms($value, $ms-ratio: $ratio, $ms-base: $base){
+  $size: pow($ms-ratio, $value) * $ms-base;
+  @return #{ $size + "rem" };
+}
